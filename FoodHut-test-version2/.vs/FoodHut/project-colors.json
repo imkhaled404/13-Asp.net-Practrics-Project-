@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "103673c4-8fe1-4f96-8e35-3986674b9ff9": {
+      "ProjectGuid": "103673c4-8fe1-4f96-8e35-3986674b9ff9",
+      "DisplayName": "FoodHut",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "83679b2b-f592-4e8c-8fde-7b710d926e07": {
+      "ProjectGuid": "83679b2b-f592-4e8c-8fde-7b710d926e07",
+      "DisplayName": "FoodHut.DataAccess",
+      "ColorIndex": 1
+    },
+    "1e70b118-13d3-420a-ba9c-fabadd04d1a2": {
+      "ProjectGuid": "1e70b118-13d3-420a-ba9c-fabadd04d1a2",
+      "DisplayName": "FoodHut.Models",
+      "ColorIndex": 2
+    },
+    "5997c324-2c58-4ad2-a87f-eba888bba435": {
+      "ProjectGuid": "5997c324-2c58-4ad2-a87f-eba888bba435",
+      "DisplayName": "FoodHut.Utility",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
