@@ -1,0 +1,64 @@
+﻿@model ExpenseTracker.Web.Models.ExpenseCategoryDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+@*Client side Validation*@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+<!--Main Div START-->
+<div class="container">
+    <div class="row content-wrapper content">
+        <div class="col-md-8 offset-md-2 p-4 bg-light shadow">
+            <!--Section START-->
+            <section>
+                <div class="box box-primary">
+                    <!-- Box Header-->
+                    <div class="box-header with-border text-primary">
+                        <h3 class="box-title">Create Expense Category</h3>
+                    </div>
+                    <hr />
+                    <form role="form" method="post" asp-action="Create">
+                            <!-- Box-Body START -->
+                        <div class="box-body">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            <div class="form-group">
+                                <label asp-for="CategoryName" class="control-label text-secondary"></label>
+                                <input asp-for="CategoryName" class="form-control" placeholder="Category Name" />
+                                <span asp-validation-for="CategoryName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- Box-Body END -->
+                        <br /><br />
+
+                        <!-- Box Footer START -->
+                        <div class="box-footer">
+                            <div class="col-lg-4 col-md-4 form-group">
+                                <button class="btn btn-primary btn-block " value="Create" type="submit">
+                                    <i class="bi bi-plus-square"></i>
+                                    <span>Create Category</span>
+                                </button>
+                            </div>
+                            <div class="col-md-2 pull-right">
+                                <a class="form-group btn btn-danger btn-block bi bi-arrow-left-circle-fill" href="/ExpenseCategoryUI/Index"><span> Back</span></a>
+                            </div>
+                        </div>
+                        <!--Box-footer END-->
+                    </form>
+                </div>
+            </section>
+            <!--Section END-->
+        </div>
+    </div>
+</div>
+<!-- Main Div END -->
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
