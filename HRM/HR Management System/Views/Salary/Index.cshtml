@@ -1,0 +1,122 @@
+﻿@model HR_Management_System.ModelsV2.SalaryViewModel
+@{ ViewData["Title"] = "GeneratePayslip";
+                Layout = "~/Views/Shared/_AdminDashboardLayout.cshtml";
+                }
+<center><h1>Generate Payslip</h1></center>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="wrap-fpanel">
+                    <div class="panel panel-default" data-collapsed="0">
+                        <div class="panel-heading">
+                            @*<div class="panel-title">
+                                    <strong>Generate Payslip</strong>
+                                </div>*@
+                        </div>
+                        <form id="form" role="form" enctype="multipart/form-data" action="http://localhost/HRMS-FRESH/admin/payroll/generate_payslip" method="post" class="form-horizontal form-groups-bordered" novalidate="novalidate">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-5 row">
+                                        <label for="departmentid" class="col-sm-3 control-label">Department</label>
+                                        <div class="col-sm-9">
+                                            <select name="departmentid" class="form-control">
+                                                <option value="none">Select One</option>
+                                                @foreach (var item in Model.DeptLst)
+                                                {
+                                    <option value="@item.Id">@item.Name</option>
+}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5 row">
+                                        <label for="UserID" class="col-sm-3 control-label">Employee</label>
+                                        <div class="col-sm-9">
+                                            <select name="UserID" class="form-control">
+                                                <option value="none">Select One</option>
+                                                @foreach (var item in Model.UserLst)
+                                                {
+                                    <option value="@item.Id">@item.Name</option>
+}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="">
+                                            <button id="submit" type="submit" name="sbtn" value="1" class="btn btn-primary btn-block">GO</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="printableArea">
+                <div class="col-sm-12" data-offset="0">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <span style="align-content:center;">
+                                    <strong>Generate Payslip for Month: <span class="text-danger">@System.DateTime.Now.ToString("MMM-yyyy")</span></strong>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Table -->
+
+                        <div id="dataTables-example_wrapper" class="dataTables_wrapper form-inline" role="grid">
+                            <div class="row"><div class="col-sm-6"><div class="dataTables_length" id="dataTables-example_length"><label><select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> <b>Records per page</b></label></div></div><div class="col-sm-6"><div id="dataTables-example_filter" class="dataTables_filter"><label>Search:<input type="search" style="margin:0px 10px;" class="form-control input-sm" aria-controls="dataTables-example"></label></div></div></div><table class="table table-bordered table-hover dataTable no-footer" id="dataTables-example" aria-describedby="dataTables-example_info">
+                                <thead style="padding-top:30px;">
+                                    <tr role="row">
+                                        <th class="col-sm-1 sorting_asc" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column ascending" style="width: 73px;">ID</th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Full Name: activate to sort column ascending" style="width: 137px;"><strong>Full Name</strong></th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Gross Salary: activate to sort column ascending" style="width: 170px;"><strong>Gross Salary</strong></th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Deductions: activate to sort column ascending" style="width: 151px;"><strong>Deductions</strong></th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Net Salary: activate to sort column ascending" style="width: 137px;"><strong>Net Salary</strong></th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 91px;"><strong>Status</strong></th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 111px;">Signiture/th>
+                                        <th class="sorting" tabindex="0" aria-controls="dataTables-example" rowspan="1" colspan="1" aria-label="Stamp: activate to sort column ascending" style="width: 100px;">Stamp</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.UserLst)
+                                    {
+                        <tr class="odd">
+                            <td class="sorting_1">@item.Id</td>
+                            <td class=" ">@item.Name</td>
+                            <td class=" ">@item.Salary.GrossSalary</td>
+                            <td class=" ">@item.Salary.TotalDeduction</td>
+                            <td class=" ">@item.Salary.NetSalary</td>
+                            <td class=" "><span class="label label-success">Paid</span></td>
+                            <td class=" ">
+                                <a class="text-success" asp-action="GetDeatilSalary" asp-route-id="@item.Salary.Id">Generate Payslip</a>
+                            </td>
+                        </tr>
+}
+
+                                </tbody>
+                            </table><div class="row"><div class="col-sm-6"><div class="dataTables_info" id="dataTables-example_info" role="alert" aria-live="polite" aria-relevant="all">Showing 1 to 1 of 1 entries</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous"><a href="#">Previous</a></li><li class="paginate_button active" aria-controls="dataTables-example" tabindex="0"><a href="#">1</a></li><li class="paginate_button next disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_next"><a href="#">Next</a></li></ul></div></div></div>
+                            <input type="button" class="alert-primary" onclick="printDiv('printableArea')" value="print" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script language="javascript">
+    function printDiv(printableArea) {
+        var printContents = document.getElementById(printableArea).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>
+

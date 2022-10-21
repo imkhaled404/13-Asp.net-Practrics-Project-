@@ -1,0 +1,7 @@
+F:\Project\Check\HRM\Report\bin\Debug\Report.dll.config
+F:\Project\Check\HRM\Report\bin\Debug\Report.dll
+F:\Project\Check\HRM\Report\bin\Debug\Report.pdb
+F:\Project\Check\HRM\Report\obj\Debug\Report.csproj.AssemblyReference.cache
+F:\Project\Check\HRM\Report\obj\Debug\Report.csproj.CoreCompileInputs.cache
+F:\Project\Check\HRM\Report\obj\Debug\Report.dll
+F:\Project\Check\HRM\Report\obj\Debug\Report.pdb

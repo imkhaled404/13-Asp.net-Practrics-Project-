@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-HR_Management_System-0E5EA2E7-B54C-4555-A47F-C9A7D2A60D0D</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>HR_Management_System</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\**" />
+    <Content Remove="Areas\**" />
+    <EmbeddedResource Remove="Areas\**" />
+    <None Remove="Areas\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Dataset\DataSet1.cs" />
+    <Content Remove="wwwroot\Dataset\DataSet1.Designer.cs" />
+    <Content Remove="wwwroot\Dataset\DataSet1.xsc" />
+    <Content Remove="wwwroot\Dataset\DataSet1.xsd" />
+    <Content Remove="wwwroot\Dataset\DataSet1.xss" />
+    <Content Remove="wwwroot\Report\CoreEhrmsDBDataSet.Designer.cs" />
+    <Content Remove="wwwroot\Report\CoreEhrmsDBDataSet.xsc" />
+    <Content Remove="wwwroot\Report\CoreEhrmsDBDataSet.xsd" />
+    <Content Remove="wwwroot\Report\CoreEhrmsDBDataSet.xss" />
+    <Content Remove="wwwroot\Report\Report1.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="wwwroot\Dataset\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Dataset\DataSet1.Designer.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="wwwroot\Report\CoreEhrmsDBDataSet.Designer.cs">
+      <DependentUpon>CoreEhrmsDBDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Report\Report1.rdlc" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\Dataset\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="wwwroot\Dataset\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Dataset\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="wwwroot\Report\CoreEhrmsDBDataSet.xsc">
+      <DependentUpon>CoreEhrmsDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="wwwroot\Report\CoreEhrmsDBDataSet.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>CoreEhrmsDBDataSet.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Report\CoreEhrmsDBDataSet.xss">
+      <DependentUpon>CoreEhrmsDBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>
