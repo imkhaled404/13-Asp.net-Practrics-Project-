@@ -1,0 +1,8 @@
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.csproj.AssemblyReference.cache
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.InitialCreate.resources
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.InitialDatabase.resources
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.CategoryNameValidation.resources
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.ProductValidation.resources
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.ProductImages.resources
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.csproj.GenerateResource.cache
+H:\ASP.Net Core\BabyStore\BabyStore\obj\Debug\BabyStore.csproj.CoreCompileInputs.cache
