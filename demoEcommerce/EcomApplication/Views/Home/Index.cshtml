@@ -1,0 +1,27 @@
+﻿@model IEnumerable<EcomApplication.Models.Mobiles>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_HomepageLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<div class = "row" >
+    @foreach (var mobile in Model)
+    {
+        <div class="col-md-4">
+            <div class = "row">
+                <h4> <span id = "mobilename"  style = "color:darkred" > @mobile.MobileName </span></h4>
+                <p> <span class = "glyphicon glyphicon-heart" style = "color:red; pointer-events:fill" contextmenu = "Added To WishList"> </span></p>
+            </div>
+            <p> <a href="@Url.Action("EachProductDetails", "ProductDetails", mobile)"> <img src = "~/DownloadImages/@mobile.PicURL"  style = "overflow: hidden; position: relative; width:200px; height:200px;"/> </a> </p>
+            <p> <a class="btn btn-default" href="@Url.Action("EachProductDetails", "ProductDetails", mobile)"> View More» </a></p>
+            <p><span class="glyphicon glyphicon-shopping-cart" style="color:green"></span></p>
+        </div>
+    }
+</div>  
