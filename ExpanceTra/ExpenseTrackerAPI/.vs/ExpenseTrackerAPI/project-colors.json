@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c1429d8a-b420-4c53-8fd9-6d9978ce5fe2": {
+      "ProjectGuid": "c1429d8a-b420-4c53-8fd9-6d9978ce5fe2",
+      "DisplayName": "ExpenseTracker.Web",
+      "ColorIndex": 0
+    },
+    "c172de7c-586f-45a2-946c-aacf07c9d3f1": {
+      "ProjectGuid": "c172de7c-586f-45a2-946c-aacf07c9d3f1",
+      "DisplayName": "ExpenseTracker.API",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

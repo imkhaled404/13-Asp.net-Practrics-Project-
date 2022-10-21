@@ -1,0 +1,169 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "ApplicationCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlazorShared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ApplicationCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApplicationCore.dll": {}
+        }
+      },
+      "BlazorAdmin/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlazorShared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BlazorAdmin.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorAdmin.dll": {}
+        }
+      },
+      "BlazorShared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BlazorShared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorShared.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ApplicationCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
+      "Web/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ApplicationCore": "1.0.0",
+          "BlazorAdmin": "1.0.0",
+          "BlazorShared": "1.0.0",
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Web.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Web.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApplicationCore/1.0.0": {
+      "type": "project",
+      "path": "../../src/ApplicationCore/ApplicationCore.csproj",
+      "msbuildProject": "../../src/ApplicationCore/ApplicationCore.csproj"
+    },
+    "BlazorAdmin/1.0.0": {
+      "type": "project",
+      "path": "../../src/BlazorAdmin/BlazorAdmin.csproj",
+      "msbuildProject": "../../src/BlazorAdmin/BlazorAdmin.csproj"
+    },
+    "BlazorShared/1.0.0": {
+      "type": "project",
+      "path": "../../src/BlazorShared/BlazorShared.csproj",
+      "msbuildProject": "../../src/BlazorShared/BlazorShared.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../src/Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../../src/Infrastructure/Infrastructure.csproj"
+    },
+    "Web/1.0.0": {
+      "type": "project",
+      "path": "../../src/Web/Web.csproj",
+      "msbuildProject": "../../src/Web/Web.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "ApplicationCore >= 1.0.0",
+      "Web >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\babu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "H:\\ASP.Net Core\\eShopOnWeb\\tests\\UnitTests\\UnitTests.csproj",
+      "projectName": "UnitTests",
+      "projectPath": "H:\\ASP.Net Core\\eShopOnWeb\\tests\\UnitTests\\UnitTests.csproj",
+      "packagesPath": "C:\\Users\\babu\\.nuget\\packages\\",
+      "outputPath": "H:\\ASP.Net Core\\eShopOnWeb\\tests\\UnitTests\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\babu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "H:\\ASP.Net Core\\eShopOnWeb\\src\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "H:\\ASP.Net Core\\eShopOnWeb\\src\\ApplicationCore\\ApplicationCore.csproj"
+            },
+            "H:\\ASP.Net Core\\eShopOnWeb\\src\\Web\\Web.csproj": {
+              "projectPath": "H:\\ASP.Net Core\\eShopOnWeb\\src\\Web\\Web.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
