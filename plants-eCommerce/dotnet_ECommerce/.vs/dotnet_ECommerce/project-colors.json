@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2dae8613-186a-4052-9a66-fc477dceadad": {
+      "ProjectGuid": "2dae8613-186a-4052-9a66-fc477dceadad",
+      "DisplayName": "dotnet_ECommerce",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
